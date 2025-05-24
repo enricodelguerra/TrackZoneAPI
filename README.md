@@ -1,6 +1,6 @@
-# TrackZone
+# TrackZone API
 
-TrackZone é uma API REST desenvolvida em .NET 8.0 para gerenciamento e rastreamento de motos em pátios. O projeto utiliza Entity Framework Core com Oracle como banco de dados.
+TAPI RESTful desenvolvida com ASP.NET Core para gerenciamento de motos em pátios de filiais. O projeto utiliza Entity Framework Core com Oracle como banco de dados.
 
 ## 🚀 Tecnologias Utilizadas
 
