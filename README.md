@@ -1,6 +1,6 @@
 # TrackZone API
 
-TAPI RESTful desenvolvida com ASP.NET Core para gerenciamento de motos em pátios de filiais. O projeto utiliza Entity Framework Core com Oracle como banco de dados.
+API RESTful desenvolvida com ASP.NET Core para gerenciamento e rastreamento de motos em pátios de filiais. O projeto utiliza Entity Framework Core com Oracle como banco de dados.
 
 ## 🚀 Tecnologias Utilizadas
 
