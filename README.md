@@ -56,7 +56,6 @@ https://localhost:5001/swagger
 ```
 ## 📦 Exemplos de Requisições
 
-
 - Criar Usuário
 POST /api/Usuarios
 
@@ -115,6 +114,134 @@ POST /api/StatusMotos
   "usuarioId": 1
 }
 ```
+
+##  Exemplos de Rotas
+
+## 1. Usuários (UsuariosController)
+
+**Prefixo:** `/api/usuarios`
+
+- **GET /api/usuarios**  
+  Descrição: Retorna uma lista de todos os usuários (incluindo suas motos, status e operações).  
+  Resposta: Um array de objetos (UsuarioReadDTO) com os dados dos usuários.
+
+- **GET /api/usuarios/{id}**  
+  Descrição: Retorna os detalhes de um usuário (identificado pelo parâmetro de rota "id").  
+  Resposta: Um objeto (UsuarioReadDTO) ou 404 (Not Found) se o usuário não existir.
+
+- **POST /api/usuarios**  
+  Descrição: Cria um novo usuário.  
+  Resposta: Retorna o objeto criado (com o Id gerado) e o status 201 (Created).
+
+- **PUT /api/usuarios/{id}**  
+  Descrição: Atualiza os dados de um usuário (identificado pelo parâmetro de rota "id").  
+  Resposta: Retorna 204 (No Content) se a atualização for bem-sucedida ou 404 (Not Found) se o usuário não existir.
+
+- **DELETE /api/usuarios/{id}**  
+  Descrição: Remove um usuário (identificado pelo parâmetro de rota "id").  
+  Resposta: Retorna 204 (No Content) se a remoção for bem-sucedida ou 404 (Not Found) se o usuário não existir.
+
+---
+
+## 2. Operações (OperacoesController)
+
+**Prefixo:** `/api/operacoes`
+
+- **GET /api/operacoes**  
+  Descrição: Retorna uma lista de todas as operações (incluindo dados da moto e do usuário associado).  
+  Resposta: Um array de objetos (OperacaoReadDTO).
+
+- **GET /api/operacoes/{id}**  
+  Descrição: Retorna os detalhes de uma operação (identificada pelo parâmetro de rota "id").  
+  Resposta: Um objeto (OperacaoReadDTO) ou 404 (Not Found) se a operação não existir.
+
+- **POST /api/operacoes**  
+  Descrição: Cria uma nova operação.  
+  Resposta: Retorna o objeto criado (com o Id gerado) e o status 201 (Created).
+
+- **PUT /api/operacoes/{id}**  
+  Descrição: Atualiza os dados de uma operação (identificada pelo parâmetro de rota "id").  
+  Resposta: Retorna 204 (No Content) se a atualização for bem-sucedida ou 404 (Not Found) se a operação não existir.
+
+- **DELETE /api/operacoes/{id}**  
+  Descrição: Remove uma operação (identificada pelo parâmetro de rota "id").  
+  Resposta: Retorna 204 (No Content) se a remoção for bem-sucedida ou 404 (Not Found) se a operação não existir.
+
+---
+
+## 3. Localizações (LocalizacoesController)
+
+**Prefixo:** `/api/localizacoes`
+
+- **GET /api/localizacoes**  
+  Descrição: Retorna uma lista de todas as localizações (incluindo dados da moto associada).  
+  Resposta: Um array de objetos (LocalizacaoReadDTO).
+
+- **GET /api/localizacoes/{id}**  
+  Descrição: Retorna os detalhes de uma localização (identificada pelo parâmetro de rota "id").  
+  Resposta: Um objeto (LocalizacaoReadDTO) ou 404 (Not Found) se a localização não existir.
+
+- **POST /api/localizacoes**  
+  Descrição: Cria uma nova localização.  
+  Resposta: Retorna o objeto criado (com o Id gerado) e o status 201 (Created).
+
+- **PUT /api/localizacoes/{id}**  
+  Descrição: Atualiza os dados de uma localização (identificada pelo parâmetro de rota "id").  
+  Resposta: Retorna 204 (No Content) se a atualização for bem-sucedida ou 404 (Not Found) se a localização não existir.
+
+- **DELETE /api/localizacoes/{id}**  
+  Descrição: Remove uma localização (identificada pelo parâmetro de rota "id").  
+  Resposta: Retorna 204 (No Content) se a remoção for bem-sucedida ou 404 (Not Found) se a localização não existir.
+
+---
+
+## 4. Motos (MotosController)
+
+**Prefixo:** `/api/motos`
+
+- **GET /api/motos**  
+  Descrição: Retorna uma lista de todas as motos (incluindo dados do usuário associado).  
+  Resposta: Um array de objetos (MotoReadDTO).
+
+- **GET /api/motos/{id}**  
+  Descrição: Retorna os detalhes de uma moto (identificada pelo parâmetro de rota "id").  
+  Resposta: Um objeto (MotoReadDTO) ou 404 (Not Found) se a moto não existir.
+
+- **POST /api/motos**  
+  Descrição: Cria uma nova moto.  
+  Resposta: Retorna o objeto criado (com o Id gerado) e o status 201 (Created).
+
+- **PUT /api/motos/{id}**  
+  Descrição: Atualiza os dados de uma moto (identificada pelo parâmetro de rota "id").  
+  Resposta: Retorna 204 (No Content) se a atualização for bem-sucedida ou 404 (Not Found) se a moto não existir.
+
+- **DELETE /api/motos/{id}**  
+  Descrição: Remove uma moto (identificada pelo parâmetro de rota "id").  
+  Resposta: Retorna 204 (No Content) se a remoção for bem-sucedida ou 404 (Not Found) se a moto não existir.
+
+## 5. Status das Motos (StatusMotosController)
+
+**Prefixo:** `/api/statusmotos`
+
+- **GET /api/statusmotos**  
+  Descrição: Retorna uma lista de todos os status (incluindo dados da moto e do usuário associado).  
+  Resposta: Um array de objetos (StatusMotoReadDTO).
+
+- **GET /api/statusmotos/{id}**  
+  Descrição: Retorna os detalhes de um status (identificado pelo parâmetro de rota “id”).  
+  Resposta: Um objeto (StatusMotoReadDTO) ou 404 (Not Found) se o status não existir.
+
+- **POST /api/statusmotos**  
+  Descrição: Cria um novo status.  
+  Resposta: Retorna o objeto criado (com o Id gerado) e o status 201 (Created).
+
+- **PUT /api/statusmotos/{id}**  
+  Descrição: Atualiza os dados de um status (identificado pelo parâmetro de rota “id”).  
+  Resposta: Retorna 204 (No Content) se a atualização for bem-sucedida ou 404 (Not Found) se o status não existir.
+
+- **DELETE /api/statusmotos/{id}**  
+  Descrição: Remove um status (identificado pelo parâmetro de rota “id”).  
+  Resposta: Retorna 204 (No Content) se a remoção for bem-sucedida ou 404 (Not Found) se o status não existir.
 
 ## 📁 Estrutura do Projeto
 
